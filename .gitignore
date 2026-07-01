@@ -1,0 +1,5 @@
+﻿.codex-backups/
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
