@@ -1,0 +1,4 @@
+﻿window.CODE_WHATS_CONFIG = {
+  SUPABASE_URL: "https://ealnvednkrenazufjhyh.supabase.co",
+  SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVhbG52ZWRua3JlbmF6dWZqaHloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc2NjA2OTAsImV4cCI6MjA5MzIzNjY5MH0.aVZpzKaJCX1kT_ThwSVG1QYrgSLCOoiawNX9zxhlIuQ"
+};

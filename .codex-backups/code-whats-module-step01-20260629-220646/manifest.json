@@ -1,0 +1,48 @@
+﻿{
+    "manifest_version":  3,
+    "name":  "CODE Whats Local",
+    "description":  "Cliente operacional da CODE Imob para organizar atendimentos no WhatsApp Web.",
+    "version":  "1.0.1",
+    "permissions":  [
+                        "storage",
+                        "tabs"
+                    ],
+    "host_permissions":  [
+                             "https://web.whatsapp.com/*"
+                         ],
+    "background":  {
+                       "service_worker":  "background.js"
+                   },
+    "action":  {
+                   "default_title":  "CODE Whats Local",
+                   "default_popup":  "popup.html"
+               },
+    "content_scripts":  [
+                            {
+                                "matches":  [
+                                                "https://web.whatsapp.com/*"
+                                            ],
+                                "js":  [
+                                           "storage.js",
+                                           "content.js"
+                                       ],
+                                "css":  [
+                                            "styles.css"
+                                        ],
+                                "run_at":  "document_idle"
+                            }
+                        ],
+    "web_accessible_resources":  [
+                                     {
+                                         "resources":  [
+                                                           "crm.html",
+                                                           "crm.js",
+                                                           "styles.css",
+                                                           "storage.js"
+                                                       ],
+                                         "matches":  [
+                                                         "https://web.whatsapp.com/*"
+                                                     ]
+                                     }
+                                 ]
+}

@@ -1,0 +1,51 @@
+{
+    "manifest_version":  3,
+    "name":  "CODE Whats",
+    "description":  "Módulo CODE Whats da plataforma CODE Imob para operação dentro do WhatsApp Web.",
+    "version":  "1.2.0",
+    "permissions":  [
+                        "tabs",
+                        "storage"
+                    ],
+    "host_permissions":  [
+                             "https://web.whatsapp.com/*",
+                             "https://*.supabase.co/*"
+                         ],
+    "background":  {
+                       "service_worker":  "background.js"
+                   },
+    "action":  {
+                   "default_title":  "CODE Whats",
+                   "default_popup":  "popup.html"
+               },
+    "content_scripts":  [
+                            {
+                                "matches":  [
+                                                "https://web.whatsapp.com/*"
+                                            ],
+                                "js":  [
+                                           "code-whats.config.js",
+                                           "storage.js",
+                                           "content.js"
+                                       ],
+                                "css":  [
+                                            "styles.css"
+                                        ],
+                                "run_at":  "document_idle"
+                            }
+                        ],
+    "web_accessible_resources":  [
+                                     {
+                                         "resources":  [
+                                                           "crm.html",
+                                                           "crm.js",
+                                                           "styles.css",
+                                                           "storage.js",
+                                                           "code-whats.config.js"
+                                                       ],
+                                         "matches":  [
+                                                         "https://web.whatsapp.com/*"
+                                                     ]
+                                     }
+                                 ]
+}
